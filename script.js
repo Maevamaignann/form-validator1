@@ -4,10 +4,11 @@ const age = document.getElementById('age');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const togglePasswordButtons = document.querySelectorAll('.toggle-password');
 
 // Show input error message
 function showError(input, message) {
-  const formControl = input.parentElement;
+  const formControl = input.closest('.form-control');
   formControl.className = 'form-control error';
   const small = formControl.querySelector('small');
   small.innerText = message;
@@ -15,7 +16,7 @@ function showError(input, message) {
 
 // Show success outline
 function showSuccess(input) {
-  const formControl = input.parentElement;
+  const formControl = input.closest('.form-control');
   formControl.className = 'form-control success';
 }
 
@@ -114,4 +115,13 @@ form.addEventListener('submit', function(e) {
   }
 
   checkAge(age);
+});
+
+togglePasswordButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    const target = document.getElementById(button.dataset.target);
+    const isPassword = target.type === 'password';
+    target.type = isPassword ? 'text' : 'password';
+    button.innerText = isPassword ? 'Masquer' : 'Afficher';
+  });
 });

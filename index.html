@@ -28,16 +28,22 @@
         </div>
         <div class="form-control">
           <label for="password">Mot de passe</label>
-          <input type="password" id="password" placeholder="Entrez votre mot de passe" />
+          <div class="password-field">
+            <input type="password" id="password" placeholder="Entrez votre mot de passe" />
+            <button type="button" class="toggle-password" data-target="password">Afficher</button>
+          </div>
           <small>Message d'erreur</small>
         </div>
         <div class="form-control">
           <label for="password2">Confirmer le mot de passe</label>
-          <input
-            type="password"
-            id="password2"
-            placeholder="Entrez à nouveau votre mot de passe"
-          />
+          <div class="password-field">
+            <input
+              type="password"
+              id="password2"
+              placeholder="Entrez à nouveau votre mot de passe"
+            />
+            <button type="button" class="toggle-password" data-target="password2">Afficher</button>
+          </div>
           <small>Message d'erreur</small>
         </div>
         <button type="submit">Soumettre</button>
