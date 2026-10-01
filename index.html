@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Validateur de formulaire</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form" class="form">
+        <h2>Inscrivez-vous</h2>
+        <div class="form-control">
+          <label for="username">Nom d'utilisateur</label>
+          <input type="text" id="username" placeholder="Entrez votre nom d'utilisateur" />
+          <small>Message d'erreur</small>
+        </div>
+        <div class="form-control">
+          <label for="age">Âge</label>
+          <input type="number" id="age" step="any" placeholder="Entrez votre âge" />
+          <small>Message d'erreur</small>
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Entrez votre email" />
+          <small>Message d'erreur</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" placeholder="Entrez votre mot de passe" />
+          <small>Message d'erreur</small>
+        </div>
+        <div class="form-control">
+          <label for="password2">Confirmer le mot de passe</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Entrez à nouveau votre mot de passe"
+          />
+          <small>Message d'erreur</small>
+        </div>
+        <button type="submit">Soumettre</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
